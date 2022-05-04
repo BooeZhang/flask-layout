@@ -1,0 +1,35 @@
+
+# 开发环境配置文件
+
+DEBUG:  True
+#SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://dev:mwteck@2019@rm-uf6qw4210ysqu7v100o.mysql.rds.aliyuncs.com:3306/ttd'
+SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://root:zjwl@IRMKYBH1jKh1F@172.16.1.200:3306/ttd_20191202003012'
+
+# 多数据库操作
+# 详细使用查看： https://flask-sqlalchemy.palletsprojects.com/en/2.x/binds/#binds
+# mysql
+SQLALCHEMY_BINDS:
+  ss: 'mysql+pymysql://root:zjwl@IRMKYBH1jKh1F@172.16.1.200:3306/ttd'
+  mysql3: 'mysql+pymysql://root:zjwl@IRMKYBH1jKh1F@172.16.1.200:3306/ttd_20191202003012'
+
+# redis
+REDIS_URL: 'redis://172.16.1.202:30401/0'
+
+# flask
+SQLALCHEMY_TRACK_MODIFICATIONS: True
+SQLALCHEMY_COMMIT_TEARDOWN: True
+SQLALCHEMY_ECHO: False
+JSON_AS_ASCII: False
+disable_existing_loggers: False
+RESTFUL_JSON:
+  ensure_ascii: False
+
+# mqtt生产
+MQTT_BROKER_URL: 'elevator.mqtt.ettda.com'
+MQTT_BROKER_PORT: 1873
+MQTT_USERNAME: 'mwteckiot'
+MQTT_PASSWORD: 'Gn84cC@gd1yBUMvN3^'
+MQTT_KEEPALIVE: 5
+MQTT_TLS_ENABLED: False
+
+# ------------------------  公共配置 -----------------------------

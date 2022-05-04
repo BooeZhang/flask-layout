@@ -1,0 +1,27 @@
+
+# 开发环境配置文件
+
+DEBUG:  True
+PORT: 8090
+SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://root:root@127.0.0.1:3306/test'
+
+# 多数据库操作
+# 详细使用查看： https://flask-sqlalchemy.palletsprojects.com/en/2.x/binds/#binds
+# mysql
+SQLALCHEMY_BINDS:
+  mysql2: 'mysql+pymysql://root:root@root@127.0.0.1:3306/test'
+  mysql3: 'mysql+pymysql://root:root@root@127.0.0.1:3306/test'
+
+# redis
+REDIS_URL: 'redis://127.0.0.1:2717/0'
+
+# flask
+SQLALCHEMY_TRACK_MODIFICATIONS: True
+SQLALCHEMY_COMMIT_TEARDOWN: True
+SQLALCHEMY_ECHO: False
+JSON_AS_ASCII: False
+disable_existing_loggers: False
+RESTFUL_JSON:
+  ensure_ascii: False
+
+# ------------------------  公共配置 -----------------------------
